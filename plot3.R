@@ -1,0 +1,11 @@
+source("project.R")
+png(filename = "plot3.png")
+with(household,plot(Date,Sub_metering_1,type="l",xlab="",
+                    ylab = "Global Active Power (kilowatts)"))
+lines(household$Date,household$Sub_metering_2,col="red")
+lines(household$Date,household$Sub_metering_3,col="blue")
+aux = c("Sub_metering_1","Sub_metering_2","Sub_metering_3")
+aux2 = c("black","red","blue")
+legend("topright",legend = aux, col = aux2, lty = 1)
+dev.off()
+rm(aux,aux2)
