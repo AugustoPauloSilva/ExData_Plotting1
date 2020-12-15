@@ -5,4 +5,5 @@ hist(household$Global_active_power,
      main = "Global Active Power",
      xlab = "Global Active Power (kilowatts)")
 dev.copy(png,"plot1.png")
+dev.off()
 rm(aux)
